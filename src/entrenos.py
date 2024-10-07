@@ -43,10 +43,10 @@ def entrenos_duracio_superior(lista_entrenos, d):
             res.append(e)
     return res
 
-def suma_calorias(lista_entrenos, fecha_inicio, fecha_fin):
+def suma_calorias(lista_entrenos, fecha_inicio:date, fecha_fin:date):
     res = 0
     for e in lista_entrenos:
-        if e.fechahora.date() >= fecha_inicio and e.fechahora.date() <= fecha_fin:
+        if e.fechahora.date() > fecha_inicio and e.fechahora.date() <= fecha_fin:
             res = res + e.calorias
         else:
             res =  res + 0
